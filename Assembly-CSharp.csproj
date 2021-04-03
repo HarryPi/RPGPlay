@@ -58,7 +58,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AreaExit.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <None Include="Assets\Udemy RPG Assets\Licence.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/harry/UnityWorkspace/RPGPlay/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
