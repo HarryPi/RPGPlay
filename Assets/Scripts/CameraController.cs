@@ -15,7 +15,8 @@ public class CameraController : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        target = PlayerController.instance.transform;
+        // target = PlayerController.instance.transform;
+        target = FindObjectOfType<PlayerController>().transform;
         Bounds localBounds = map.localBounds;
 
         _halfHeight = Camera.main.orthographicSize;
@@ -24,6 +25,8 @@ public class CameraController : MonoBehaviour {
         // Gets the furthest to the left on the x axis and furthest down on the y axis
         _bottomLeftLimit = localBounds.min + new Vector3(_halfWidth, _halfHeight, 0f); 
         _topRightLimit = localBounds.max - new Vector3(_halfWidth, _halfHeight, 0f);
+        
+        FindObjectOfType<PlayerController>().SetBounds(localBounds.min, localBounds.max);
     }
 
     // LateUpdate is called once per frame after update
